@@ -36,7 +36,7 @@ const Patients = (props) => {
 
             <div className="form-group">
               <label htmlFor="exampleInputCode">Code:</label>
-              <Field name="code" className="form-control" id="exampleInputCode" aria-describedby="codeHelp" placeholder="Enter Code" />
+              <Field name="code" type="number" className="form-control" id="exampleInputCode" aria-describedby="codeHelp" placeholder="Enter Code" />
               <small id="codeHelp" className="form-text text-danger">
                 <ErrorMessage name="code" />
               </small>
@@ -60,7 +60,7 @@ const Patients = (props) => {
 
             <div className="form-group">
               <label htmlFor="exampleInputAge">Age:</label>
-              <Field name="age" className="form-control" id="exampleInputAge" aria-describedby="ageHelp" placeholder="Enter Age" />
+              <Field name="age" type="number" className="form-control" id="exampleInputAge" aria-describedby="ageHelp" placeholder="Enter Age" />
               <small id="ageHelp" className="form-text text-danger">
                 <ErrorMessage name="age" />
               </small>
@@ -74,9 +74,13 @@ const Patients = (props) => {
               </small>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="exampleInputIsFemale">Gender:</label>
-              <Field name="isFemale" className="form-control" id="exampleInputIsFemale" aria-describedby="isFemaleHelp" placeholder="Enter IsFemale" />
+            <div className="form-check">
+              <Field name="isFemale" className=" form-check-input" type="checkbox" value="" id="defaultCheck1" />
+              <label className="form-check-label" htmlFor="defaultCheck1">
+                Is female
+              </label>
+
+
               <small id="isFemaleHelp" className="form-text text-danger">
                 <ErrorMessage name="isFemale" />
               </small>
@@ -84,7 +88,7 @@ const Patients = (props) => {
 
             <div className="form-group">
               <label htmlFor="exampleInputNote">Note:</label>
-              <Field name="note" className="form-control" id="exampleInputNote" aria-describedby="noteHelp" placeholder="Enter Note" />
+              <Field component="textarea" name="note" className="form-control" id="exampleInputNote" aria-describedby="noteHelp" placeholder="Enter Note" rows="5" />
               <small id="noteHelp" className="form-text text-danger">
                 <ErrorMessage name="note" />
               </small>

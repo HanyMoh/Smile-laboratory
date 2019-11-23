@@ -25,7 +25,7 @@ const Doctors = (props) => {
 
             <div className="form-group">
               <label htmlFor="exampleInputCode">Code:</label>
-              <Field name="code" className="form-control" id="exampleInputCode" aria-describedby="codeHelp" placeholder="Enter Code" />
+              <Field name="code" type="number" className="form-control" id="exampleInputCode" aria-describedby="codeHelp" placeholder="Enter Code" />
               <small id="codeHelp" className="form-text text-danger">
                 <ErrorMessage name="code" />
               </small>
@@ -49,7 +49,7 @@ const Doctors = (props) => {
 
             <div className="form-group">
               <label htmlFor="exampleInputNote">Note:</label>
-              <Field name="note" className="form-control" id="exampleInputNote" aria-describedby="noteHelp" placeholder="Enter Note" />
+              <Field component="textarea" name="note" className="form-control" id="exampleInputNote" aria-describedby="noteHelp" placeholder="Enter Note" rows="5" />
               <small id="noteHelp" className="form-text text-danger">
                 <ErrorMessage name="note" />
               </small>

@@ -38,12 +38,12 @@ const Users = (props) => {
 
 
             <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-              <div className="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" className="btn btn-outline-danger">Delete</button>
-              </div>
               <div className="btn-group mr-2" role="group" aria-label="Second group">
                 <button type="submit" className="btn btn-outline-primary">Save</button>
                 <button type="button" className="btn btn-outline-info">Clear</button>
+              </div>
+              <div className="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" className="btn btn-outline-danger">Delete</button>
               </div>
             </div>
 

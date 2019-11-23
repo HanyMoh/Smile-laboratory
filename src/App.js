@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage'
 import Doctors from './pages/DoctorsPage';
 import Patients from './pages/PatientsPage';
 import Users from './pages/UsersPage';
+import ParaPage from './pages/ParaPage'
+import LaboratoryPage from './pages/LaboratoryPage'
 import NotFound from './pages/NotFound';
 import Menu from './components/Menu';
 import './App.css';
@@ -20,6 +22,9 @@ function App() {
             <Route path="/users"    component={Users} />
             <Route path="/patients" component={Patients} />
             <Route path="/doctors"  component={Doctors} />
+            <Route path="/parameters"  component={ParaPage} />
+            <Route path="/laboratory"  component={LaboratoryPage} />
+
             <Route component={NotFound} />
           </Switch>
         </div>

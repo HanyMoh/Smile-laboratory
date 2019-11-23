@@ -1,13 +1,9 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-const Menu = (props) => {
-
-
+const Menu = () => {
   return (
-
     <React.Fragment>
-
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <b className="navbar-brand" href="#">Smile Lab</b>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,14 +24,15 @@ const Menu = (props) => {
               <NavLink to="/doctors" className="nav-link">Doctors</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/Page3" className="nav-link">Page3</NavLink>
+              <NavLink to="/parameters" className="nav-link">Parameters</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/laboratory" className="nav-link">Laboratory</NavLink>
             </li>
           </ul>
         </div>
       </nav>
     </React.Fragment>
-
-
   );
 }
 
