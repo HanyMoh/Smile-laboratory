@@ -5,7 +5,11 @@ import { Prompt } from "react-router-dom";
 
 const Patients = (props) => {
   const schema = Yup.object().shape({
-    code: Yup.number(),
+    code: Yup
+      .number()
+      .notRequired()
+      .positive()
+      .integer(),
     name: Yup.string().required(),
     phone: Yup.string().required(),
     age: Yup
@@ -21,6 +25,8 @@ const Patients = (props) => {
     is_female: Yup.boolean(),
     note: Yup.string()
   });
+
+
   return (
 
     <div className="wide-aria">

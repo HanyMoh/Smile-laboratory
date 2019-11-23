@@ -2,7 +2,7 @@ import React from 'react';
 
 const Laboratory = (props) => {
   return (
-    <div className="wide-aria">
+    <div className="app-aria">
       Laboratory
     </div>
   );

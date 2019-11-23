@@ -5,7 +5,11 @@ import { Prompt } from "react-router-dom";
 
 const Doctors = (props) => {
   const schema = Yup.object().shape({
-    code: Yup.number(),
+    code: Yup
+      .number()
+      .notRequired()
+      .positive()
+      .integer(),
     name: Yup.string().required(),
     phone: Yup.string().required(),
     note: Yup.string()

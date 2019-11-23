@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Laboratory from '../components/Laboratory'
+import ParaTree from '../components/ParaTree'
 
 class LaboratoryPage extends Component {
   state = { }
@@ -8,18 +9,17 @@ class LaboratoryPage extends Component {
     return (
       <React.Fragment>
         <div className="jumbotron">
-          <h3 className=""><b>Doctors Page</b></h3>
+          <h3 className=""><b>Laboratory Page</b></h3>
           <hr className="my-4" />
 
           <div className="row">
 
             <div className="col-3">
-              tree here
-              <Laboratory />
+              <ParaTree />
             </div>
 
             <div className="col-9">
-              header and footer here
+              <Laboratory />
             </div>
 
           </div>

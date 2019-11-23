@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import Para from '../components/Para'
+import ParaTree from '../components/ParaTree'
 
 class ParaPage extends Component {
-  state = { }
+  state = {
+    para: {
+      parent: 0,
+      itemName: '',
+      position: 0
+    }
+  }
 
   render() {
     return (
@@ -12,14 +19,13 @@ class ParaPage extends Component {
           <hr className="my-4" />
 
           <div className="row">
-
-            <div className="col-9">
-              Tree view
+            <div className="col-7 app-aria">
+              <b>Parameters tree</b>
+              <ParaTree />
             </div>
 
-            <div className="col-3">
-              Form here
-              <Para />
+            <div className="col-5">
+              <Para values={this.state.para} />
             </div>
 
 
