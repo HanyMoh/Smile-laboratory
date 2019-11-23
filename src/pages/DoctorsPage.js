@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import Users from '../components/Users';
+import Doctors from '../components/Doctors'
 import UserData from '../components/UserData'
+import PeopleSearch from '../components/PeopleSearch'
 
-class Page2 extends Component {
+class DoctorsPage extends Component {
   state = {
-    user: {
-      userame: '',
-      password: ''
+    person: {
+      code: '',
+      name: '',
+      phone: '',
+      note: ''
     }
   }
 
@@ -14,17 +17,18 @@ class Page2 extends Component {
     return (
       <React.Fragment>
         <div className="jumbotron">
-          <h3 className=""><b>Users Page</b></h3>
+          <h3 className=""><b>Doctors Page</b></h3>
           <hr className="my-4" />
 
           <div className="row">
 
             <div className="col-3">
+              <PeopleSearch />
               <UserData />
             </div>
 
             <div className="col-9">
-              <Users values={this.state.user} />
+              <Doctors values={this.state.person} />
             </div>
 
           </div>
@@ -34,4 +38,4 @@ class Page2 extends Component {
   }
 }
 
-export default Page2;
+export default DoctorsPage;
